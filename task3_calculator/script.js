@@ -1,75 +1,38 @@
-// script.js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="calculator">
+        <div id="display" class="display"></div>
+        <div class="buttons">
+            <button class="btn" data-value="7">7</button>
+            <button class="btn" data-value="8">8</button>
+            <button class="btn" data-value="9">9</button>
+            <button class="btn operator" data-value="/">÷</button>
 
-document.addEventListener('DOMContentLoaded', function() {
-    const display = document.getElementById('display');
-    const buttons = document.querySelectorAll('.btn');
-    
-    let currentInput = '';
-    let previousInput = '';
-    let operator = '';
-    let result = '';
+            <button class="btn" data-value="4">4</button>
+            <button class="btn" data-value="5">5</button>
+            <button class="btn" data-value="6">6</button>
+            <button class="btn operator" data-value="x">×</button>
 
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            const value = this.getAttribute('data-value');
+            <button class="btn" data-value="1">1</button>
+            <button class="btn" data-value="2">2</button>
+            <button class="btn" data-value="3">3</button>
+            <button class="btn operator" data-value="-">−</button>
 
-            if (value === 'C') {
-                clearDisplay();
-            } else if (value === '=') {
-                if (previousInput && operator && currentInput) {
-                    result = calculate(previousInput, currentInput, operator);
-                    display.textContent = result;
-                    previousInput = result;
-                    currentInput = '';
-                    operator = '';
-                }
-            } else if (['+', '-', '*', '/'].includes(value)) {
-                if (currentInput) {
-                    if (previousInput && operator) {
-                        result = calculate(previousInput, currentInput, operator);
-                        display.textContent = result + ' ' + value;
-                        previousInput = result;
-                    } else {
-                        previousInput = currentInput;
-                        display.textContent = currentInput + ' ' + value;
-                    }
-                    currentInput = '';
-                    operator = value;
-                }
-            } else {
-                currentInput += value;
-                if (operator) {
-                    display.textContent = previousInput + ' ' + operator + ' ' + currentInput;
-                } else {
-                    display.textContent = currentInput;
-                }
-            }
-        });
-    });
+            <button class="btn" data-value="0">0</button>
+            <button class="btn" data-value=".">.</button>
+            <button class="btn" data-value="C" id="clear">C</button>
+            <button class="btn operator" data-value="+">+</button>
 
-    function clearDisplay() {
-        currentInput = '';
-        previousInput = '';
-        operator = '';
-        result = '';
-        display.textContent = '0';
-    }
-
-    function calculate(first, second, operator) {
-        first = parseFloat(first);
-        second = parseFloat(second);
-
-        switch (operator) {
-            case '+':
-                return first + second;
-            case '-':
-                return first - second;
-            case '*':
-                return first * second;
-            case '/':
-                return first / second;
-            default:
-                return second;
-        }
-    }
-});
+            <button class="btn equal" data-value="=">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
