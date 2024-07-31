@@ -28,7 +28,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333; 
+    background-color: #333;
 }
 
 nav .logo {
@@ -52,7 +52,7 @@ nav .nav-links {
     border-radius: 5px;
     text-decoration: none;
     color: rgb(0, 0, 0);
-    background-color: #00fff2; 
+    background-color: #00fff2;
     transition: background-color 0.3s ease;
 }
 
@@ -61,11 +61,11 @@ nav .nav-links {
 }
 
 .nav-links .nav-button.special {
-    background-color: #ff0000; 
+    background-color: #ff0000;
 }
 
 .nav-links .nav-button.special:hover {
-    background-color: #00ff37; 
+    background-color: #00ff37;
 }
 
 .hero {
@@ -90,6 +90,10 @@ nav .nav-links {
     color: #fff;
     border-radius: 4px;
     text-decoration: none;
+}
+
+.hidden {
+    display: none;
 }
 
 .features {
@@ -129,6 +133,58 @@ nav .nav-links {
     width: 100%;
     max-width: 300px;
     border-radius: 4px;
+}
+
+.testimonials {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+    margin: 0;
+}
+
+.testimonial .author {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact, .consult {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+}
+
+.contact p, .consult p {
+    margin: 0;
+}
+
+.read-more {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.read-more h2 {
+    margin-bottom: 20px;
+}
+
+.read-more p {
+    margin: 0 0 20px;
 }
 
 .footer {
